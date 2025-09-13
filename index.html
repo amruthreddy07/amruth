@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adaptive Learning Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Adaptive LMS</h1>
+    <nav>
+      <button onclick="showSection('upload')">Upload Content</button>
+      <button onclick="showSection('assessments')">Assessments</button>
+      <button onclick="showSection('dashboard')">Dashboard</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="upload" class="section">
+      <h2>Upload Educational Content</h2>
+      <form id="uploadForm">
+        <input type="text" id="title" placeholder="Assessment Title" required>
+        <input type="file" id="file" accept=".pdf,.txt" required>
+        <button type="submit">Upload and Process</button>
+      </form>
+      <div id="uploadResult"></div>
+    </section>
+
+    <section id="assessments" class="section hidden">
+      <h2>Assessments</h2>
+      <div id="assessmentList"></div>
+      <div id="quiz"></div>
+    </section>
+
+    <section id="dashboard" class="section hidden">
+      <h2>Performance Dashboard</h2>
+      <div id="analytics"></div>
+      <canvas id="chart"></canvas>
+      <div id="recommendations"></div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
